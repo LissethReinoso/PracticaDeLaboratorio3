@@ -1,2 +1,2 @@
 # PracticaDeLaboratorio3
-Patrón de diseño de MVC y DAO
+Agenda telefónica con MVC y DAO
