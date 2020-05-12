@@ -18,8 +18,18 @@ public class Test {
         
         Usuario usuario=new Usuario();
         Telefono telefono=new Telefono();
-        
+        usuario.setCedula(02134);
         usuario.setNombre("Marco");
+        usuario.setApellido("Molina");
+        usuario.setCorreo("Lreinosob1@est.ups.edu.ec");
+        usuario.setContraseña("wieeiqwq");
+        telefono.setNumero("1229192");
+        telefono.setCodigo(12);
+        telefono.setOperadora("Movistar");
+        telefono.setTipo("Celular");
+        usuario.agregarTelefono(telefono);
+        
+        System.out.println(usuario);
         
         
     }
