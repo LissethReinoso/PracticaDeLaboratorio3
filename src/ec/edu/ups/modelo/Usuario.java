@@ -16,8 +16,13 @@ public class Usuario {
     public String apellido;
     public String correo;
     public String contraseña;
-
+    //agregacion
+    private Telefono[] telefonos;
+    int cont;
+    
     public Usuario() {
+        telefonos=new Telefono[10];
+        cont=0;
     }
 
     public Usuario(int cedula, String nombre, String apellido, String correo, String contraseña) {
@@ -74,7 +79,19 @@ public class Usuario {
         hash = 17 * hash + this.cedula;
         return hash;
     }
+    public void agregarTelefono(Telefono tel) {
+        if (cont < 10) {
+            telefonos[cont] = tel;
+            cont++;
+        } else {
+            System.out.println("Has llegado al limite de teléfonos");
+        }
+    }
 
+    public Telefono[] getDirecciones() {
+        return telefonos;
+    }
+    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
