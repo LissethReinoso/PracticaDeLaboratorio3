@@ -5,8 +5,11 @@
  */
 package ec.edu.ups.test;
 
+import ec.edu.ups.controlador.ControladorUsuario;
 import ec.edu.ups.modelo.Telefono;
 import ec.edu.ups.modelo.Usuario;
+import ec.ups.edu.vista.VistaUsuario;
+import java.util.Scanner;
 
 /**
  *
@@ -16,21 +19,23 @@ public class Test {
     
     public static void main(String[]  args){
         
-        Usuario usuario=new Usuario();
-        Telefono telefono=new Telefono();
-        usuario.setCedula(02134);
-        usuario.setNombre("Marco");
-        usuario.setApellido("Molina");
-        usuario.setCorreo("Lreinosob1@est.ups.edu.ec");
-        usuario.setContraseña("wieeiqwq");
-        telefono.setNumero("1229192");
-        telefono.setCodigo(12);
-        telefono.setOperadora("Movistar");
-        telefono.setTipo("Celular");
-        usuario.agregarTelefono(telefono);
+        Scanner menu=new Scanner(System.in);
+        int m;
+        System.out.println("MENÚ");
+        System.out.println("Registrarse:");
+        System.out.println("Iniciar sesión: ");
         
-        System.out.println(usuario);
+        //vista
+        VistaUsuario vista=new VistaUsuario();
         
+        //controlador
+        ControladorUsuario controlador=new ControladorUsuario(vista);
+        //guardar al usuarios através del controlador
+        controlador.registrar();
+        
+        
+        //ver telefonos
+      
         
     }
 }

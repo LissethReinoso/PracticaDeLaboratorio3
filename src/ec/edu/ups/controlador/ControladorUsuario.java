@@ -21,7 +21,7 @@ public class ControladorUsuario {
     //constructor
     public ControladorUsuario(VistaUsuario vistaUsuario){
         this.vistaUsuario=vistaUsuario;
-        this.usuarioDao= new usuarioDao();
+        this.usuarioDao= new UsuarioDao();
     }
     
     //llamar al DAO para llamar al usuario
@@ -36,7 +36,20 @@ public class ControladorUsuario {
         usuario=usuarioDao.read(cedula);
         vistaUsuario.verUsuario(usuario);
     }
-    //llama al DAO para actualizar al usuario
-    public void 
+    //llama al DAO para modificar al usuario
+    public void modificar(){
+        usuario=vistaUsuario.modificarUsuario();
+        usuarioDao.update(usuario);
+    }
+    //llama al DAO para eliminar al usuario
+    public void eliminar(){
+        usuario=vistaUsuario.eliminarUsuario();
+        usuarioDao.delete(usuario);
+    }
+    public void verUsuarios(){
+        List<Usuario> usuarios;
+        usuarios=usuarioDao.findAll();
+        vistaUsuario.verUsuarios(usuarios);
+    }
             
 }

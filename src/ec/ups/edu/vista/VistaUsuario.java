@@ -19,10 +19,16 @@ public class VistaUsuario {
       public Usuario agregarUsuario(){
           leer=new Scanner(System.in);
           System.out.println("Ingrese sus datos: ");
+          System.out.print("Cédula: ");
           int cedula=leer.nextInt();
+          leer.nextLine();
+          System.out.print("Nombre: ");
           String nombre=leer.nextLine();
+          System.out.print("Apelllido: ");
           String apellido=leer.nextLine();
+          System.out.print("Correo: ");
           String correo=leer.nextLine();
+          System.out.print("Contraseña: ");
           String contraseña=leer.nextLine();
           return new Usuario(cedula,nombre,apellido,correo,contraseña);
       }
@@ -42,7 +48,7 @@ public class VistaUsuario {
           leer=new Scanner(System.in);
           System.out.println("Ingrese la cédula: ");
           int cedula=leer.nextInt();
-          return new Usuario(cedula,null,null);
+          return new Usuario(cedula,null,null,null,null);
       }
       public int buscarUsuario(){
           leer=new Scanner(System.in);
