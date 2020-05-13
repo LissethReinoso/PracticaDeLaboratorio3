@@ -1,41 +1,76 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ec.edu.ups.test;
 
+import ec.edu.ups.controlador.ControladorTelefono;
 import ec.edu.ups.controlador.ControladorUsuario;
 import ec.edu.ups.modelo.Telefono;
 import ec.edu.ups.modelo.Usuario;
+import ec.ups.edu.vista.VistaTelefono;
 import ec.ups.edu.vista.VistaUsuario;
 import java.util.Scanner;
 
 /**
  *
- * @author Usuario
+ * @author Lisseth Reinoso
  */
 public class Test {
     
     public static void main(String[]  args){
         
-        Scanner menu=new Scanner(System.in);
-        int m;
-        System.out.println("MENÚ");
-        System.out.println("Registrarse:");
-        System.out.println("Iniciar sesión: ");
         
         //vista
         VistaUsuario vista=new VistaUsuario();
+        VistaTelefono vistat=new VistaTelefono();
         
         //controlador
         ControladorUsuario controlador=new ControladorUsuario(vista);
-        //guardar al usuarios através del controlador
-        controlador.registrar();
+       ControladorTelefono controladort=new ControladorTelefono(vistat);
         
         
+       // controlador.modificar();
+        //controlador.eliminar();
         //ver telefonos
-      
+        Scanner menu=new Scanner(System.in);
+        int m;
+        System.out.println("MENÚ");
+         System.out.println("Ingrese 1 para registrarse");
+         System.out.println("Ingrese 2 para iniciar sesión");
+         System.out.println("Ingrese 3 para salir ");
+         m=menu.nextInt();
+         
+         if(m<4 && m>0){
+             switch(m){
+                 case 1:
+                     //Registrarse
+                     //guardar al usuarios através del controlador
+                     controlador.registrar();
+                     
+                     //TELEFONO
+                     Scanner telefono=new Scanner(System.in);
+                     int t;
+                     System.out.println("¿Desea registrar teléfonos?");
+                     System.out.println("1 SI");
+                     System.out.println("2 NO");
+                     t=telefono.nextInt();
+                     if(t==1){
+                         System.out.println("Ingrese los teléfonos");
+                         //****TELEFONOS****
+                         controladort.registrar();
+                     }else{
+                         System.out.println("Teléfonos no ingresados");
+                     }
+                     
+                     break;
+                 case 2:
+                     //Iniciar sesión
+                     
+                     break;
+                 case 3:
+                     System.out.println("A salido del menú");
+             }
+         }else{
+             System.out.println("Ingrese el número correctamente");
+         }
         
     }
 }
