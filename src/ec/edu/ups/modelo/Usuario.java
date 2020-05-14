@@ -1,6 +1,8 @@
 
 package ec.edu.ups.modelo;
 
+import java.util.Objects;
+
 /**
  *
  * @author Lisseth Reinoso
@@ -69,12 +71,7 @@ public class Usuario {
         this.contraseña = contraseña;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 17 * hash + this.cedula;
-        return hash;
-    }
+    ///telefono
     public void agregarTelefono(Telefono tel) {
         if (cont < 10) {
             telefonos[cont] = tel;
@@ -87,7 +84,15 @@ public class Usuario {
     public Telefono[] getTelefonos() {
         return telefonos;
     }
-    
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 73 * hash + Objects.hashCode(this.correo);
+        hash = 73 * hash + Objects.hashCode(this.contraseña);
+        return hash;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -100,11 +105,16 @@ public class Usuario {
             return false;
         }
         final Usuario other = (Usuario) obj;
-        if (this.cedula != other.cedula) {
+        if (!Objects.equals(this.correo, other.correo)) {
+            return false;
+        }
+        if (!Objects.equals(this.contraseña, other.contraseña)) {
             return false;
         }
         return true;
     }
+    
+    
 
     @Override
     public String toString() {

@@ -60,10 +60,12 @@ public class VistaUsuario {
       }
       public int buscarUsuario(){
           leer=new Scanner(System.in);
-          System.out.println("BUSCAR USUARIO");
-          System.out.println("Ingrese el usuario a buscar");
+          System.out.println("INICIAR SESIÓN");
+          System.out.println("Cedula");
           int cedula=leer.nextInt();
           return cedula;
+         
+          
       }
       
       public void verUsuario(Usuario usuario){

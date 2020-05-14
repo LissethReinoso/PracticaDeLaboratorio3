@@ -23,7 +23,7 @@ public class VistaTelefono {
 
     public Telefono agregarTelefono() {
         leer = new Scanner(System.in);
-        System.out.println("REGISTRAR TELÉFONO");
+        
         System.out.println("Ingrese los datos: ");
         System.out.print("Código: ");
         int codigo = leer.nextInt();

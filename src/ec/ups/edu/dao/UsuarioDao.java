@@ -27,7 +27,7 @@ public class UsuarioDao implements IUsuarioDao {
     @Override
     public Usuario read(int cedula) {
         for (Usuario usuario : listaUsuario) {
-            if (usuario.getCedula() == cedula) {
+            if (usuario.getCedula() == cedula ) {
                 return usuario;
             }
         }

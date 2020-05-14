@@ -29,6 +29,7 @@ public class Test {
         
        // controlador.modificar();
         //controlador.eliminar();
+        
         //ver telefonos
         Scanner menu=new Scanner(System.in);
         int m;
@@ -44,7 +45,7 @@ public class Test {
                      //Registrarse
                      //guardar al usuarios através del controlador
                      controlador.registrar();
-                     
+                     controlador.verUsuario();
                      //TELEFONO
                      Scanner telefono=new Scanner(System.in);
                      int t;
@@ -55,7 +56,13 @@ public class Test {
                      if(t==1){
                          System.out.println("Ingrese los teléfonos");
                          //****TELEFONOS****
+                         System.out.println("REGISTRAR TELÉFONO");
                          controladort.registrar();
+                         controladort.registrar();
+                         
+                         //VER LOS TELÉFONOS
+                         
+                         controladort.verTelefonos();
                      }else{
                          System.out.println("Teléfonos no ingresados");
                      }
@@ -63,6 +70,7 @@ public class Test {
                      break;
                  case 2:
                      //Iniciar sesión
+                     controlador.verUsuario();
                      
                      break;
                  case 3:

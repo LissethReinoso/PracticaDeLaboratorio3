@@ -33,6 +33,7 @@ public class ControladorUsuario {
     //llama al DAO para obtener un usuario por la cédula y luego muestra en la vista.
     public void verUsuario(){
         int cedula= vistaUsuario.buscarUsuario();
+       
         usuario=usuarioDao.read(cedula);
         vistaUsuario.verUsuario(usuario);
     }
