@@ -1,26 +1,26 @@
-
 package ec.ups.edu.dao;
 
 /**
  *
  * @author Lisseth Reinoso
  */
-
 import ec.edu.ups.idao.ITelefonoDao;
 import ec.edu.ups.modelo.Telefono;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-public class TelefonoDao implements ITelefonoDao{
+
+public class TelefonoDao implements ITelefonoDao {
 
     private List<Telefono> listaTelefono;
-    
+
     public TelefonoDao() {
-        listaTelefono=new ArrayList<>();
+        listaTelefono = new ArrayList<>();
     }
+
     @Override
     public void create(Telefono telefono) {
-         listaTelefono.add(telefono);
+        listaTelefono.add(telefono);
     }
 
     @Override
@@ -43,10 +43,11 @@ public class TelefonoDao implements ITelefonoDao{
             }
         }
     }
+
     //iterator colecciones
     @Override
     public void delete(Telefono telefono) {
-         Iterator<Telefono> it = listaTelefono.iterator();
+        Iterator<Telefono> it = listaTelefono.iterator();
         while (it.hasNext()) {
             Telefono t = it.next();
             if (t.getCodigo() == telefono.getCodigo()) {
@@ -58,7 +59,7 @@ public class TelefonoDao implements ITelefonoDao{
 
     @Override
     public List<Telefono> findAll() {
-         return listaTelefono;
+        return listaTelefono;
     }
-    
+
 }

@@ -1,4 +1,3 @@
-
 package ec.edu.ups.modelo;
 
 /**
@@ -6,23 +5,22 @@ package ec.edu.ups.modelo;
  * @author Lisseth Reinoso
  */
 public class Telefono {
-        public int codigo;
-        public String numero;
-        public String tipo;
-        public String operadora;
+
+    public int codigo;
+    public String numero;
+    public String tipo;
+    public String operadora;
 
     public Telefono() {
     }
-        
-        
+
     public Telefono(int codigo, String numero, String tipo, String operadora) {
         this.codigo = codigo;
         this.numero = numero;
         this.tipo = tipo;
         this.operadora = operadora;
     }
-        
-        
+
     public int getCodigo() {
         return codigo;
     }
@@ -79,12 +77,10 @@ public class Telefono {
         }
         return true;
     }
-    
-    
+
     @Override
     public String toString() {
         return "Telefono{" + "codigo=" + codigo + ", numero=" + numero + ", tipo=" + tipo + ", operadora=" + operadora + '}';
     }
-        
-        
+
 }

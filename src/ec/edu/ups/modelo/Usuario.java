@@ -1,4 +1,3 @@
-
 package ec.edu.ups.modelo;
 
 import java.util.Objects;
@@ -17,10 +16,10 @@ public class Usuario {
     //agregacion
     private Telefono[] telefonos;
     int cont;
-    
+
     public Usuario() {
-        telefonos=new Telefono[10];
-        cont=0;
+        telefonos = new Telefono[10];
+        cont = 0;
     }
 
     public Usuario(int cedula, String nombre, String apellido, String correo, String contraseña) {
@@ -113,16 +112,14 @@ public class Usuario {
         }
         return true;
     }
-    
-    
 
     @Override
     public String toString() {
         String telefonos = "";
-        for (int i = 0; i < cont; i++) {            
-            telefonos += this.telefonos[i] + "\n";            
+        for (int i = 0; i < cont; i++) {
+            telefonos += this.telefonos[i] + "\n";
         }
-        return "Usuario{" + "cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", contraseña=" + contraseña + '}'+ "\nTeléfonos: " + telefonos;
+        return "Usuario{" + "cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", contraseña=" + contraseña + '}' + "\nTeléfonos: " + telefonos;
     }
 
 }

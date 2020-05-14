@@ -1,4 +1,3 @@
-
 package ec.ups.edu.dao;
 
 import ec.edu.ups.idao.IUsuarioDao;
@@ -16,18 +15,18 @@ public class UsuarioDao implements IUsuarioDao {
     private List<Usuario> listaUsuario;
 
     public UsuarioDao() {
-        listaUsuario=new ArrayList<>();
+        listaUsuario = new ArrayList<>();
     }
-    
+
     @Override
     public void create(Usuario usuario) {
-     listaUsuario.add(usuario);
+        listaUsuario.add(usuario);
     }
 
     @Override
     public Usuario read(int cedula) {
         for (Usuario usuario : listaUsuario) {
-            if (usuario.getCedula() == cedula ) {
+            if (usuario.getCedula() == cedula) {
                 return usuario;
             }
         }
@@ -62,6 +61,4 @@ public class UsuarioDao implements IUsuarioDao {
         return listaUsuario;
     }
 
-
-    
 }
