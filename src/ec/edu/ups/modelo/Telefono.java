@@ -6,10 +6,10 @@ package ec.edu.ups.modelo;
  */
 public class Telefono {
 
-    public int codigo;
-    public String numero;
-    public String tipo;
-    public String operadora;
+    private int codigo;
+    private String numero;
+    private String tipo;
+    private String operadora;
 
     public Telefono() {
     }

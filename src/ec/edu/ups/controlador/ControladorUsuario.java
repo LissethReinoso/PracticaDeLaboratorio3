@@ -2,7 +2,7 @@ package ec.edu.ups.controlador;
 
 /**
  *
- * @author Usuario
+ * @author Lisseth Reinoso
  */
 import ec.edu.ups.idao.IUsuarioDao;
 import ec.edu.ups.modelo.Usuario;
@@ -15,6 +15,7 @@ public class ControladorUsuario {
     //Objetos vista
     private VistaUsuario vistaUsuario;
     private Usuario usuario;
+    private Usuario sesion;
     private IUsuarioDao usuarioDao;
 
     //constructor
@@ -32,7 +33,7 @@ public class ControladorUsuario {
     //llama al DAO para obtener un usuario por la cédula y luego muestra en la vista.
     public void verUsuario() {
         int cedula = vistaUsuario.buscarUsuario();
-
+        
         usuario = usuarioDao.read(cedula);
         vistaUsuario.verUsuario(usuario);
     }
@@ -53,6 +54,20 @@ public class ControladorUsuario {
         List<Usuario> usuarios;
         usuarios = usuarioDao.findAll();
         vistaUsuario.verUsuarios(usuarios);
+    }
+    
+    public void iniciarSesion(){
+        usuario = vistaUsuario.iniciarSesion();
+        List<Usuario> listaUsuario = usuarioDao.findAll();
+        for(Usuario usuario : listaUsuario){
+            if(this.usuario.getCorreo().equals(usuario.getCorreo())){
+                if(this.usuario.getContraseña().equals(usuario.getContraseña())){
+                    sesion = usuario;
+                    this.usuario = usuario;
+                    vistaUsuario.verUsuario(sesion);
+                }
+            }
+        }
     }
 
 }

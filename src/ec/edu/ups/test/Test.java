@@ -41,7 +41,7 @@ public class Test {
                     //Registrarse
                     //guardar al usuarios através del controlador
                     controlador.registrar();
-                    controlador.verUsuario();
+                    controlador.verUsuarios();
                     //TELEFONO
                     Scanner telefono = new Scanner(System.in);
                     int t;
@@ -78,7 +78,7 @@ public class Test {
                             switch (modificaru) {
                                 case 1:
                                     controlador.modificar();
-                                    controlador.verUsuario();
+                                    controlador.verUsuarios();
                                     controladort.verTelefonos();
                                     break;
 
@@ -89,14 +89,7 @@ public class Test {
 
                                 case 3:
                                     //MODIFICAR TELEFONO
-                                    int modificartelf;
-                                    System.out.println("Desea modificar los datos del teléfono?");
-                                    System.out.println("1 SI");
-                                    System.out.println("2 NO");
-                                    Scanner modtelf = new Scanner(System.in);
-                                    modificartelf = modtelf.nextInt();
-
-                                    if (modificartelf < 3 && modificartelf > 0) {
+                           
                                         System.out.println("MODIFICACIÓN DE TELÉFONOS");
                                         System.out.println("Elija 1 para modificar datos del teléfono");
                                         System.out.println("Elija 2 para eliminiar el teléfono");
@@ -116,12 +109,13 @@ public class Test {
                                             case 3:
                                                 controladort.verTelefonos();
                                                 break;
-                                        }
+                                        
+                            
                                     }
                                     break;
 
                                 case 4:
-                                    controlador.verUsuario();
+                                    controlador.verUsuarios();
                                     controladort.verTelefonos();
                             }
                         } else {
@@ -129,12 +123,13 @@ public class Test {
                         }
                     } else {
                         System.out.println("Teléfonos no ingresados");
+                        controlador.verUsuarios();
                     }
 
                     break;
                 case 2:
-                    //Iniciar sesión
-                    controlador.verUsuario();
+                    
+                    controlador.iniciarSesion();
 
                     break;
                 case 3:

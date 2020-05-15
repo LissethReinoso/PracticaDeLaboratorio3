@@ -8,18 +8,13 @@ import java.util.Objects;
  */
 public class Usuario {
 
-    public int cedula;
-    public String nombre;
-    public String apellido;
-    public String correo;
-    public String contraseña;
-    //agregacion
-    private Telefono[] telefonos;
-    int cont;
+    private int cedula;
+    private String nombre;
+    private String apellido;
+    private String correo;
+    private String contraseña;
 
     public Usuario() {
-        telefonos = new Telefono[10];
-        cont = 0;
     }
 
     public Usuario(int cedula, String nombre, String apellido, String correo, String contraseña) {
@@ -70,20 +65,6 @@ public class Usuario {
         this.contraseña = contraseña;
     }
 
-    ///telefono
-    public void agregarTelefono(Telefono tel) {
-        if (cont < 10) {
-            telefonos[cont] = tel;
-            cont++;
-        } else {
-            System.out.println("Has llegado al limite de teléfonos");
-        }
-    }
-
-    public Telefono[] getTelefonos() {
-        return telefonos;
-    }
-
     @Override
     public int hashCode() {
         int hash = 5;
@@ -115,11 +96,8 @@ public class Usuario {
 
     @Override
     public String toString() {
-        String telefonos = "";
-        for (int i = 0; i < cont; i++) {
-            telefonos += this.telefonos[i] + "\n";
-        }
-        return "Usuario{" + "cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", contraseña=" + contraseña + '}' + "\nTeléfonos: " + telefonos;
+        return "Usuario{" + "cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", contrase\u00f1a=" + contraseña + '}';
     }
+
 
 }

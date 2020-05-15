@@ -4,7 +4,7 @@ package ec.ups.edu.vista;
  *
  * @author Lisseth Reinoso
  */
-import ec.edu.ups.modelo.Usuario;
+import ec.edu.ups.modelo.*;
 import java.util.List;
 import java.util.Scanner;
 
@@ -62,13 +62,23 @@ public class VistaUsuario {
 
     public int buscarUsuario() {
         leer = new Scanner(System.in);
-        System.out.println("INICIAR SESIÓN");
+        System.out.println("BUSCAR USUARIO");
         System.out.println("Cedula");
         int cedula = leer.nextInt();
         return cedula;
+    }
+    
+    public Usuario iniciarSesion() {
+        leer = new Scanner(System.in);
+        System.out.println("INICIAR SESIÓN");
+        System.out.println("Correo");
+        String correo = leer.nextLine();
+        System.out.println("Contraseña");
+        String contraseña = leer.nextLine();
+        return new Usuario(0, null, null, correo, contraseña);
 
     }
-
+    
     public void verUsuario(Usuario usuario) {
         System.out.println("USUARIO: " + usuario);
     }
