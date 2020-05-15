@@ -46,10 +46,37 @@ __La clase ControladorUsuario__
 ![ControladorUsuario](https://github.com/LissethReinoso/PracticaDeLaboratorio3/blob/master/ControladorUsuario3.PNG)
 
 
+_*Paquete idao*_
 
 
+__La interface ITelefonoDao__
+![ITelefonoDao](https://github.com/LissethReinoso/PracticaDeLaboratorio3/blob/master/Idaotelefono.PNG)
+
+__La interface ITelefonoDao__
+![IUsuarioDao](https://github.com/LissethReinoso/PracticaDeLaboratorio3/blob/master/IdaoUsuario.PNG)
 
 
+_*Paquete dao*_
 
+__La clase TelefonoDao__
+![TelefonoDao](https://github.com/LissethReinoso/PracticaDeLaboratorio3/blob/master/TelefonoDao1.PNG)
+![TelefonoDao](https://github.com/LissethReinoso/PracticaDeLaboratorio3/blob/master/TelefonoDao2.PNG)
+
+
+__La clase UsuarioDao__
+![UsuarioDao](https://github.com/LissethReinoso/PracticaDeLaboratorio3/blob/master/UsuarioDao1.PNG)
+![UsuarioDao](https://github.com/LissethReinoso/PracticaDeLaboratorio3/blob/master/UsuarioDao.PNG)
+
+_*Paquete test*_
+
+__La clase test__
+
+
+![Test](https://github.com/LissethReinoso/PracticaDeLaboratorio3/blob/master/Test1.PNG)
+![Test](https://github.com/LissethReinoso/PracticaDeLaboratorio3/blob/master/Test2.PNG)
+![Test](https://github.com/LissethReinoso/PracticaDeLaboratorio3/blob/master/Test3.PNG)
+![Test](https://github.com/LissethReinoso/PracticaDeLaboratorio3/blob/master/Test4.PNG)
+![Test](https://github.com/LissethReinoso/PracticaDeLaboratorio3/blob/master/Test5.PNG)
+![Test](https://github.com/LissethReinoso/PracticaDeLaboratorio3/blob/master/Test6.PNG)
 
 
